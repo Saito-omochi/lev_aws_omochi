@@ -8,11 +8,16 @@
     </head>
     <body>
         <h1>Blog Name</h1>
-        <div class='post'>
+        <div class = 'posts'>
             @foreach($disp as $p)
-                <h2 class='title'>{{$p -> title}}</h2>
-                <p class='body'>{{$p -> body}}</p>
+                <div class='post'>
+                    <h2 class='title'>{{$p -> title}}</h2>
+                    <p class = 'body'>{{$p -> body}}</p>
+                </div>
             @endforeach
+        </div>
+        <div class='paginate'>
+            {{$disp -> links()}}
         </div>
     </body>
 </html>
