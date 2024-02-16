@@ -8,6 +8,7 @@ use App\Models\Post;
 class PostController extends Controller
 {
     public function index(Post $post){
-        return $post->get();
+        return view('posts.index') -> with(['disp'=> $post -> getPaginateByLimit()]);
+        //viewで渡す先を指定する。withで内容を指定する。getByLimitでModelにDBを操作する指示を出す。
     }
 }
