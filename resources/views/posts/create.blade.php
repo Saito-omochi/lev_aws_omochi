@@ -8,14 +8,23 @@
     </head>
     <body>
         <h1>投稿作成画面</h1>
-        <div>
-            <div class = "title">
-                <p>{{$post}}</p>
+        <form action="/posts" method="POST">
+            @csrf
+            <div>
+                <div class="title">
+                    <h2>タイトル</h2>
+                    <input type="text" maxlength=100 name="post[title]"></input>
+                </div>
+                <p></p>
+                <div class="body">
+                    <h2>本文</h2>
+                    <textarea maxlength=400 rows=6 cols=20 name="post[body]"></textarea>
+                </div>
+                <p><input type="submit" value="送信する"></p>
             </div>
-            <div class - "body">
-                <p>{{$post}}</p>
-            </div>
+        </form>
+        <div class="fotter">
+            <a href = "/">投稿一覧に戻る</a>
         </div>
-        <a href = "/">投稿一覧に戻る</a>
     </body>
 </html>

@@ -21,7 +21,18 @@ class PostController extends Controller
     
     public function create()
     {
-        $post = "uwa~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~";
-        return view('posts.create') -> with(['post' => $post]);
+        return view('posts.create');
+    }
+    
+    public function store(Request $request, Post $post)
+    {//Requestモデルをインスタンス化して情報を受け取る
+        $input = $request["post"];
+        $post -> fill($input) -> save();
+        return redirect('/posts/' . $post -> id);
+        //リクエスト情報として受け取ったタイトル・本文にてpostsテーブルに新規データとして登録
+        //登録完了後、/posts/今登録した投稿のid　にリダイレクト
+        //Post::create(['name' => "title", 'name' => "body"]);
+        //return view("posts.show") -> with(['post']);
+        //dd($request -> all()); 
     }
 }
