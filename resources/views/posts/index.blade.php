@@ -18,6 +18,7 @@
                 </div>
             @endforeach
         </div>
+        <a href = "/posts/create">投稿作成画面へ</a>
         <div class='paginate'>
             {{$posts -> links()}}
         </div>
