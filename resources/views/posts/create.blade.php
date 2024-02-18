@@ -13,12 +13,14 @@
             <div>
                 <div class="title">
                     <h2>タイトル</h2>
-                    <input type="text" maxlength=100 name="post[title]"></input>
+                    <input type="text" maxlength=100 name="post[title]" value="{{old('post.title')}}")></input>
+                    <p class="title__error" style="color:red">{{$errors -> first('post.title')}}</p>
                 </div>
                 <p></p>
                 <div class="body">
                     <h2>本文</h2>
-                    <textarea maxlength=400 rows=6 cols=20 name="post[body]"></textarea>
+                    <textarea maxlength=400 rows=6 cols=20 name="post[body]" value="{{old('post.body')}}"></textarea>
+                    <p class="body__error" style="color:red">{{$errors -> first('post.title')}}</p>
                 </div>
                 <p><input type="submit" value="送信する"></p>
             </div>
