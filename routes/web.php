@@ -23,6 +23,7 @@ Route::get('/', function () {
 Route::get('/',[Postcontroller::class,'index']);
 #Route::get('/posts', [PostController::class,'index']);
 
+
 Route::post("/posts", [PostController::class, 'store']);
 #/posts がPOSTリクエストで飛んできたときにPostControllerのstoreが実行されるように
 
