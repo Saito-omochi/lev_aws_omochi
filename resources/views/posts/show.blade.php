@@ -18,6 +18,7 @@
         </div>
         <div class = "fotter">
             <a href = '/'>戻る</a>
+            <a href = '/posts/{{$post -> id}}/edit'>投稿編集画面へ</a>
         </div>
     </body>
 </html>

@@ -20,7 +20,7 @@
                 <div class="body">
                     <h2>本文</h2>
                     <textarea maxlength=400 rows=6 cols=20 name="post[body]" value="{{old('post.body')}}"></textarea>
-                    <p class="body__error" style="color:red">{{$errors -> first('post.title')}}</p>
+                    <p class="body__error" style="color:red">{{$errors -> first('post.body')}}</p>
                 </div>
                 <p><input type="submit" value="送信する"></p>
             </div>
