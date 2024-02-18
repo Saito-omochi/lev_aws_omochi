@@ -15,6 +15,7 @@
                         <a href="/posts/{{$p -> id}}">{{$p -> title}}</a>
                     </h2>
                     <p class = 'body'>{{$p -> body}}</p>
+                    <a href = '/posts/{{$p -> id}}/edit'>投稿編集画面へ</a>
                 </div>
             @endforeach
         </div>
